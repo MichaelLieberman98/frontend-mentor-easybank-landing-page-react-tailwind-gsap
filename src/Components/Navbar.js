@@ -14,12 +14,8 @@ export default function Navbar({ paddingLeft, paddingRight }) {
   let menu = useRef(null);
 
   let menuButton = useRef(null);
-  let xButton = useRef(null);
 
   let moveMenu = null;
-
-  // let upDown;
-  // let downUp;
 
 
   const handleResize = (e) => {
@@ -58,22 +54,22 @@ export default function Navbar({ paddingLeft, paddingRight }) {
 
   }
 
-  useEffect(() => {
-    window.addEventListener("resize", handleResize);
+  // useEffect(() => {
+  //   window.addEventListener("resize", handleResize);
 
-    // let upDown = gsap.to(menu, { duration: .8, y: "-100%" });
-    // let downUp = gsap.to(menu, { duration: .8, y: "100%" });
+  //   // let upDown = gsap.to(menu, { duration: .8, y: "-100%" });
+  //   // let downUp = gsap.to(menu, { duration: .8, y: "100%" });
 
-    if (window.innerWidth >= 800) {
-      moveMenu = null;
-    }
+  //   // if (window.innerWidth >= 800) {
+  //   //   moveMenu = null;
+  //   // }
 
-    // (width < 800) ?
-    //   moveMenu = () => {
-    //     console.log("moving")
-    //     menuState ? upDown.play() : downUp.play();
-    //   } : moveMenu = null;
-  }, []);
+  //   // (width < 800) ?
+  //   //   moveMenu = () => {
+  //   //     console.log("moving")
+  //   //     menuState ? upDown.play() : downUp.play();
+  //   //   } : moveMenu = null;
+  // }, []);
 
 
 
@@ -126,10 +122,10 @@ export default function Navbar({ paddingLeft, paddingRight }) {
         md:hidden
         lg:hidden`)}
             onClick={moveMenuFunc}
-            ref={el => {
-              xButton = el;
-              // console.log("x = " + xButton);
-            }}
+            // ref={el => {
+            //   xButton = el;
+            //   // console.log("x = " + xButton);
+            // }}
             xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
           </svg>
